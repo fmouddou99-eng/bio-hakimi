@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-sage-900;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: 'Cairo', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .font-display-rtl {
+    font-family: 'Cairo', system-ui, sans-serif;
+  }
+  .font-display-ltr {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .category-banner {
+    @apply bg-sage-700 text-cream-50 px-8 py-5 rounded-2xl flex items-center gap-4;
+  }
+  .btn-primary {
+    @apply bg-sage-700 hover:bg-sage-600 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+  .btn-ghost {
+    @apply border border-sage-300 hover:border-sage-600 text-sage-700 hover:bg-sage-50 font-medium py-2 px-4 rounded-xl transition-all duration-200;
+  }
+  .qty-btn {
+    @apply w-8 h-8 rounded-lg bg-sage-100 hover:bg-sage-200 text-sage-800 font-bold transition-colors duration-150 flex items-center justify-center;
+  }
+  .size-btn {
+    @apply px-3 py-1.5 text-sm rounded-lg border border-sage-200 hover:border-sage-600 text-sage-700 transition-all duration-150 cursor-pointer;
+  }
+  .size-btn-active {
+    @apply bg-sage-700 border-sage-700 text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
